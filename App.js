@@ -15,19 +15,27 @@ import Profile from './src/screen/Profile';
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-const RootStack = createNativeStackNavigator();
+const RRRR = createNativeStackNavigator();
 
-const RootStackScreen = ({navigation}) => (
-  <RootStack.Navigator>
-    <RootStack.Screen name = 'SplashScreen' component = {SplashScreen}/>
-    <RootStack.Screen name = 'SignIn' component = {SignIn}/>
-    <RootStack.Screen name = 'SignUp' component = {SignUp}/>
-  </RootStack.Navigator>
+const RT = ({navigation}) => (
+  <RRRR.Navigator>
+    <RRRR.Screen name = 'SplashScreen' component = {SplashScreen}/>
+    <RRRR.Screen name = 'SignIn' component = {SignIn}/>
+    <RRRR.Screen name = 'SignUp' component = {SignUp}/>
+  </RRRR.Navigator>
 )
 
 const HomeStack = createNativeStackNavigator();
 
 const HomeStackScreen = ({navigation}) => (
+  <HomeStack.Navigator>
+    <HomeStack.Screen name = 'Home' component = {Home}/>
+    <HomeStack.Screen name = 'Profile' component = {Profile}/>
+    <HomeStack.Screen name = 'Details' component = {Details}/>
+  </HomeStack.Navigator>
+)
+
+const Abc = ({navigation}) => (
   <HomeStack.Navigator>
     <HomeStack.Screen name = 'Home' component = {Home}/>
     <HomeStack.Screen name = 'Profile' component = {Profile}/>
@@ -117,7 +125,7 @@ export default function App(){
             <HomeStackScreen/>
           ) 
         : 
-          <RootStackScreen/>
+          <RT/>
         }
       </NavigationContainer>
     </AuthContext.Provider>

@@ -16,7 +16,7 @@ export default function Home({navigation}) {
 
     return (
         <View>
-            <Text>Home</Text>
+            <Text>Home Screen</Text>
             <Button title = 'Profile' onPress = {() => navigation.navigate('Profile')}/>
             <Button title = 'Details' onPress = {() => navigation.navigate('Details')}/>
         </View>
