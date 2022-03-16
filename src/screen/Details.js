@@ -4,7 +4,7 @@ import { View, Text } from 'react-native'
 export default function Details({navigation}) {
     return (
         <View>
-            <Text>Details</Text>
+            <Text>Details Screen</Text>
         </View>
     )
 }
